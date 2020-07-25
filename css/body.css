@@ -1,0 +1,45 @@
+h1{text-align: center;}
+h2{text-align: center;}
+
+html, body, button
+{
+    cursor: url("../img/diamondsword.cur"), default;
+}
+html,body, main.content
+{
+    margin: 0;
+    height: 100%;
+}
+
+p{text-align: center;margin-top: 2vh;} 
+
+nav.left
+{	
+    width: 17%;
+    height: 100%;
+    background-image: url("../img/Menu.jpg");
+    background-size: 100% 100%;
+    filter: brightness(1.5);
+    transition: 0.5s ease;
+}
+
+div.right
+{
+    width: 83%;
+    background-image: url("../img/Gradient.jpg");
+    background-size: 83% 100%;
+    overflow-x: clip;
+}
+
+div.head
+{
+    width: 100%;
+    background-image: url("../img/Head.jpg");
+    height: 10%;
+}
+
+span.info
+{
+    width: 100%;
+}
+

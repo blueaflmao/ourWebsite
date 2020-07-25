@@ -40,8 +40,8 @@ div.artSlideshow
     background-size: contain;
     background-repeat: no-repeat;
 
-    /* display: none; */
-    visibility: hidden;
+    display: none;
+    /* visibility: hidden; */
 
     /* -webkit-animation: fade 1.5s;
     animation: fade 1.5s; */

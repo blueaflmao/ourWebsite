@@ -123,7 +123,9 @@ function enlargeSlide()
 	var slideFrame = document.getElementById("frame");
 	slideFrame.style.transform = "scale(1)";
 
-	displayArts();
+	displayArts(j = Math.floor(Math.random() * (imagelist.length+2)));
+	
+	
 }
 
 function slideButtons()
@@ -150,7 +152,7 @@ function slideButtons()
 }
 
 
-function displayArts(j = Math.floor(Math.random() * (imagelist.length+2) ))
+function displayArts(j)
 {
 	if (j < 0){j = 0;}
 	else if (j > imagelist.length - 1){j = imagelist.length - 1;}
@@ -174,41 +176,45 @@ function displayArts(j = Math.floor(Math.random() * (imagelist.length+2) ))
 		k += 1;	
 	}
 
-
+	var slideshow = document.getElementsByClassName("artSlideshow");
+	for (var n = 0; n <= 4; n++)
+	{
+		slideshow[n].style.display = "block";
+	}
+	
 	var navButtons = document.getElementsByClassName("navSlide");
 	
 	navButtons[0].onclick = function()
 	{
 		displayArts(j-1);
-		// for (var n = 0; n <= 4; n++)
-		// {
-		// 	slideshow[n].style.animation = "fade 0.7s";
-		// }
+		
+		for (var n = 0; n <= 4; n++)
+		{
+			slideshow[n].style.display = "none";
+		}
 
-		// offNavSlide();
-		// setTimeout(resetFade, 705);
+		setTimeout(resetFade, 10);
 	};
 
 	navButtons[1].onclick = function()
 	{
 		displayArts(j+1); 
-		// for (var m = 0; m <= 4; m++)
-		// {
-		// 	slideshow[m].style.animation = "fade 0.7s";
-		// }
+			
+		for (var n = 0; n <= 4; n++)
+		{
+			slideshow[n].style.display = "none";
+		}
 
-		// offNavSlide();
-		// setTimeout(resetFade, 705);
+		setTimeout(resetFade, 10);
 	};
 }
-
 
 function resetFade()
 {
 	var slideshow = document.getElementsByClassName("artSlideshow");
 		for (var i = 0; i <= 4; i++)
 		{
-			slideshow[i].style.animation = "none";
+			slideshow[i].style.display = "block";
 		}
 }
 

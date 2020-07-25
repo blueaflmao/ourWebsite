@@ -62,12 +62,6 @@ function artProfile(i)
 	
 	var avatar = document.getElementsByClassName("avatar");
 
-	var slideshow = document.getElementsByClassName("artSlideshow");
-	for (var j = 0; j <= 4; j++)
-	{
-		slideshow[j].style.visibility = "unset";
-	}
-
 	// Call enlargeSlide() to scale up and make the slideshow appears
 	// Call enlargeSpeech() to scale up speech ubble and make text appears
 	enlargeSlide();

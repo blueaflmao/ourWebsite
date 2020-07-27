@@ -187,26 +187,25 @@ function displayArts(j)
 	navButtons[0].onclick = function()
 	{
 		displayArts(j-1);
-		
-		for (var n = 0; n <= 4; n++)
-		{
-			slideshow[n].style.display = "none";
-		}
-
+		noDisplaySlide();
 		setTimeout(resetFade, 10);
 	};
 
 	navButtons[1].onclick = function()
 	{
 		displayArts(j+1); 
-			
-		for (var n = 0; n <= 4; n++)
-		{
-			slideshow[n].style.display = "none";
-		}
-
+		noDisplaySlide();
 		setTimeout(resetFade, 10);
 	};
+}
+
+function noDisplaySlide()
+{
+	var slideshow = document.getElementsByClassName("artSlideshow");
+	for (var n = 0; n <= 4; n++)
+	{
+		slideshow[n].style.display = "none";
+	}
 }
 
 function resetFade()

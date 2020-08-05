@@ -64,11 +64,12 @@ function artProfile(i)
 
 	// Call enlargeSlide() to scale up and make the slideshow appears
 	// Call enlargeSpeech() to scale up speech ubble and make text appears
-	enlargeSlide();
+	
 	enlargeSpeech();
 	
 	if (i==0)
 	{
+		enlargeSlide(0);
 		avatar[1].style.marginLeft = "45%"; 
 		avatar[1].style.transform = "rotateZ(0deg) scale(0)";
 
@@ -86,6 +87,7 @@ function artProfile(i)
 
 	else if (i==1)
 	{
+		enlargeSlide(1);
 		avatar[0].style.transform = "rotateZ(0deg) scale(0)";
 
 		avatar[1].style.transform = "rotateZ(360deg) scale(0.7)";

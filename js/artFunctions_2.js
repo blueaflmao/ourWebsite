@@ -1,5 +1,5 @@
-var imgDir = "url(img/";
 
+var imgDir = "";
 function backArtPress(i)
 // Impliment animations for the avatars when the return button is clicked
 {
@@ -8,7 +8,7 @@ function backArtPress(i)
 	
 	returnArt.style.transform = "scaleX(0)";
 
-
+	console.log(imgDir);
 	// Scale down and hide the slideshow when return button is clicked
 
 	// var hideSlide = document.getElementsByClassName("artSlideshow")
@@ -118,14 +118,12 @@ function artSlideshow()
 }
 
 
-function enlargeSlide()
+function enlargeSlide(i)
 {
 	var slideFrame = document.getElementById("frame");
 	slideFrame.style.transform = "scale(1)";
 
-	displayArts(j = Math.floor(Math.random() * (imagelist.length+2)));
-	
-	
+	displayArts(j = Math.floor(Math.random() * (imagelist.length+2)), i);
 }
 
 function slideButtons()
@@ -152,8 +150,20 @@ function slideButtons()
 }
 
 
-function displayArts(j)
+function displayArts(j, h)
 {
+	if (h==0) 
+	{
+		imgDir = "url(Art/Other/";
+		imagelist = TessArt;
+	}
+	else if (h==1) 
+	{
+		imgDir = "url(Art/Webfolio/Productions_faites_en_cours/";
+		imagelist = HungArt;
+	}
+
+	// j = imagelist's index
 	if (j < 0){j = 0;}
 	else if (j > imagelist.length - 1){j = imagelist.length - 1;}
 
@@ -186,14 +196,14 @@ function displayArts(j)
 	
 	navButtons[0].onclick = function()
 	{
-		displayArts(j-1);
+		displayArts(j-1,h);
 		noDisplaySlide();
 		setTimeout(resetFade, 10);
 	};
 
 	navButtons[1].onclick = function()
 	{
-		displayArts(j+1); 
+		displayArts(j+1,h); 
 		noDisplaySlide();
 		setTimeout(resetFade, 10);
 	};

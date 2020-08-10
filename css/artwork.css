@@ -73,10 +73,11 @@ div.artSlideshow:nth-of-type(4){margin-left: 37.5%; z-index: 1; transform: scale
 div.artSlideshow:nth-of-type(5){margin-left: 49.5%; z-index: 0; transform: scale(0.6);}
 
 
-div.speechBubble 
+div#speechBubble1 
 {
+    opacity: 0.7;
 	position: absolute;
-	background: #fbf6ebf6;
+	background: #c579f1f6;
 	border-radius: .4em;
     width: 40%;
     padding: 60px 20px;
@@ -93,20 +94,57 @@ div.speechBubble
     /* filter: brightness(1.08); */
 }
 
-div.speechBubble:after 
+div#speechBubble1:after 
 {
-	content: '';
+    content: '';
 	position: absolute;
 	left: 0;
 	top: 50%;
 	width: 0;
 	height: 0;
 	border: 34px solid transparent;
-	border-right-color: #fbf6ebf6;
+	border-right-color: #c579f1f6;
 	border-left: 0;
 	border-top: 0;
 	margin-top: -17px;
     margin-left: -34px;
+}
+
+div#speechBubble2 
+{
+    opacity: 0.7;
+	position: absolute;
+	background: #c579f1f6;
+	border-radius: .4em;
+    width: 40%;
+    padding: 60px 20px;
+    margin-left: 20%;
+    margin-top: -7%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 200%;
+    text-shadow: 0 -0.05em 0.1em rgba(0,0,0,.3);
+    transform: scale(0);
+    transform-origin: center;
+    transition: 0.2s ease, 0.8s;
+    /* filter: brightness(1.08); */
+}
+
+div#speechBubble2:after 
+{
+    content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 34px solid transparent;
+	border-left-color: #c579f1f6;
+	border-right: 0;
+	border-top: 0;
+	margin-top: -17px;
+    margin-right: -34px;
 }
 
 div#frame

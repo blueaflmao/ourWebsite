@@ -8,18 +8,11 @@ function backArtPress(i)
 	
 	returnArt.style.transform = "scaleX(0)";
 
-	console.log(imgDir);
-	// Scale down and hide the slideshow when return button is clicked
-
-	// var hideSlide = document.getElementsByClassName("artSlideshow")
-	// for (j = 0; j <= 4; j++)
-	// {
-	// 	hideSlide[j].style.transform = "scale(0)";
-	// }
-
 	// Scale down and hide the speech bubble when the return button is clicked
-	var hideSpeech = document.getElementsByClassName("speechBubble");
-	hideSpeech[0].style.transform = "scale(0)";
+	var hideSpeech1 = document.getElementById("speechBubble1");
+	var hideSpeech2 = document.getElementById("speechBubble2");
+	hideSpeech1.style.transform = "scale(0)";
+	hideSpeech2.style.transform = "scale(0)";
 	
 	// Make the avatars clickable again
 	avatar[0].onclick = function() {artProfile(0);};
@@ -85,16 +78,22 @@ function avatarLeave(i)
 
 function speechBubble()
 {
-	var speechBubble = document.createElement("div");
-	speechBubble.setAttribute("class", "speechBubble");
-	info[0].appendChild(speechBubble);
+	var speechBubble1 = document.createElement("div");
+	speechBubble1.setAttribute("id", "speechBubble1");
+	info[0].appendChild(speechBubble1);
+	
+	var speechBubble2 = document.createElement("div");
+	speechBubble2.setAttribute("id", "speechBubble2");
+	info[0].appendChild(speechBubble2);
 }
 
 
-function enlargeSpeech()
+function enlargeSpeech(i)
 {
-	var speechBubble = document.getElementsByClassName("speechBubble");
-	speechBubble[0].style.transform = "scale(1)";
+	var speechBubble1 = document.getElementById("speechBubble1");
+	var speechBubble2 = document.getElementById("speechBubble2");
+	if (i == 0){speechBubble1.style.transform = "scale(1)";}
+	else if (i == 1){speechBubble2.style.transform = "scale(1)";}
 }
 
 

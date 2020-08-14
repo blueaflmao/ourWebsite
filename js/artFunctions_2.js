@@ -125,6 +125,8 @@ function enlargeSlide(i)
 	displayArts(j = Math.floor(Math.random() * (imagelist.length+2)), i);
 }
 
+
+// Create navigation button to change the content of the slides
 function slideButtons()
 {
 	var slideFrame = document.getElementById("frame");
@@ -151,6 +153,7 @@ function slideButtons()
 
 function displayArts(j, h)
 {
+	// h = avatar choice, then display the according artworks with the avatars
 	if (h==0) 
 	{
 		imgDir = "url(Art/Other/";
@@ -192,7 +195,10 @@ function displayArts(j, h)
 	}
 	
 	var navButtons = document.getElementsByClassName("navSlide");
-	
+
+	// move up the index of the slideshow to display next or prev image
+	// then disable display on the slides to start the Fade in animation again with
+	// resetFade function
 	navButtons[0].onclick = function()
 	{
 		displayArts(j-1,h);

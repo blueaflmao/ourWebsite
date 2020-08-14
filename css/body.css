@@ -15,20 +15,32 @@ p{text-align: center;margin-top: 2vh;}
 
 nav.left
 {	
-    width: 17%;
+    position: absolute;
+    width: 3%;
     height: 100%;
     background-image: url("../img/Menu.jpg");
-    background-size: 100% 100%;
+    background-size: auto 100%;
     filter: brightness(1.5);
-    transition: 0.5s ease;
+    transition: 0.3s ease;
+    z-index: 2;
+    box-shadow: 10px 0 5px -30px #888;
+}
+
+nav.left:hover
+{
+    width: 17%;
 }
 
 div.right
 {
-    width: 83%;
+    position: absolute;
+    height: 100%;
+    width: 97%;
+    right: 0;
     background-image: url("../img/Gradient.jpg");
-    background-size: 83% 100%;
+    background-size: 100% 100%;
     overflow-x: clip;
+    transition: 0.3s ease;
 }
 
 div.head
@@ -41,5 +53,17 @@ div.head
 span.info
 {
     width: 100%;
+}
+
+div#rOverlay
+{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.692);
+    opacity: 0.95;
+    z-index: 1;
+    transition: 0.3s ease;
 }
 

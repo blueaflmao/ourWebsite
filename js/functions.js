@@ -37,15 +37,14 @@ function writeHead()
 	document.getElementsByClassName("overlay")[0].innerHTML = head;
 }
 
-// function hover()
-// {
-// 	var hover = document.getElementsByClassName("head");
-// 	hover[0].style.backgroundImage = "none";
-// }
+function menuHover()
+{
+	var rOverlay = document.getElementById("rOverlay");
+	rOverlay.style.display = "block";
+}
 
-// function leave()
-// {
-// 	var leave = document.getElementsByClassName("head");
-// 	leave[0].style.backgroundImage = "url('img/Head.jpg')";
-// }
-
+function menuOut()
+{
+	var rOverlay = document.getElementById("rOverlay");
+	rOverlay.style.display = "none";
+}

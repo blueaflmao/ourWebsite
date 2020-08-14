@@ -3,8 +3,8 @@ button.gameButtons
     position: relative;
     vertical-align: top;
     font-size: 2vh;
-    width: 20%;
-    height: 20vh;
+    width: 32vh;
+    height: 18vh;
     /* background-color:rgba(145, 201, 253, 0.6); */
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     outline: none;
@@ -79,6 +79,4 @@ button.menu:hover
 button.menu:first-of-type{margin-top: 23vh;}
 
 button.menu:nth-of-type(2),button.menu:nth-of-type(3),
-button.menu:nth-of-type(4), button.menu:nth-of-type(5){margin-top: 17%;}
-
-button.menu:nth-of-type(5){margin-bottom: 70%;}
+button.menu:nth-of-type(4), button.menu:nth-of-type(5){margin-top: 6vh;}

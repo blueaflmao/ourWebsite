@@ -18,7 +18,7 @@
 
 	<body>
 		<main class="content" style="display:flex">  
-			<nav class="left"> 
+			<nav class="left" onmouseover="menuHover()" onmouseout="menuOut()"> 
 				<button class="menu" type="button" onclick="openIntro()">
 					INTRODUCTION
 				</button>
@@ -38,12 +38,13 @@
 				<button class="menu" type="button" onclick="openContact()">
 					CONTACT DETAILS 
 				</button>
+
 			</nav>
-		
+			
 			<div class="right">
-				<div class="head">
-					
-				</div>
+				<div id="rOverlay"> </div>
+
+				<div class="head"></div>
 
 				<span class="info">
 					<p>

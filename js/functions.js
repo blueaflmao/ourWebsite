@@ -40,11 +40,13 @@ function writeHead()
 function menuHover()
 {
 	var rOverlay = document.getElementById("rOverlay");
-	rOverlay.style.display = "block";
+	rOverlay.style.visibility = "visible";
+	rOverlay.style.opacity = "0.9";
 }
 
 function menuOut()
 {
 	var rOverlay = document.getElementById("rOverlay");
-	rOverlay.style.display = "none";
+	rOverlay.style.visibility = "hidden";
+	rOverlay.style.opacity = "0";
 }

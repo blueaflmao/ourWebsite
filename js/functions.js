@@ -42,6 +42,18 @@ function menuHover()
 	var rOverlay = document.getElementById("rOverlay");
 	rOverlay.style.visibility = "visible";
 	rOverlay.style.opacity = "0.9";
+
+	var menuButtons = document.getElementsByClassName("menu");
+	setTimeout(function()
+	{
+		menuButtons[0].innerHTML = "INTRODUCTION";
+		menuButtons[1].innerHTML = "ARTWORK";
+		menuButtons[2].innerHTML = "GAMES";
+		menuButtons[3].innerHTML = "SOMETHING";
+		menuButtons[4].innerHTML = "CONTACT DETAILS";
+	}
+	, 100);
+	
 }
 
 function menuOut()
@@ -49,4 +61,15 @@ function menuOut()
 	var rOverlay = document.getElementById("rOverlay");
 	rOverlay.style.visibility = "hidden";
 	rOverlay.style.opacity = "0";
+
+	var menuButtons = document.getElementsByClassName("menu");
+	setTimeout(function()
+	{
+		menuButtons[0].innerHTML = "INTRO";
+		menuButtons[1].innerHTML = "ARTS";
+		menuButtons[2].innerHTML = "GAMES";
+		menuButtons[3].innerHTML = "SMTH";
+		menuButtons[4].innerHTML = "CONTACTS";
+	}
+	, 100);
 }

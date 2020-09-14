@@ -9,17 +9,23 @@ html,body, main.content
 {
     margin: 0;
     height: 100%;
+    /* min-width: 1280px; */
+    /* min-height: 720px; */
 }
 
 p{text-align: center;margin-top: 2vh;} 
 
 nav.left
 {	
-    position: absolute;
-    width: 3%;
+    position: sticky;
+    top: 0;
+    width: 6%;
+    min-width: 6%;
+    max-width: 17%;
     height: 100%;
     background-image: url("../img/Menu.jpg");
     background-size: auto 100%;
+    background-repeat: no-repeat;
     filter: brightness(1.5);
     transition: 0.3s ease;
     z-index: 2;
@@ -35,11 +41,12 @@ div.right
 {
     position: absolute;
     height: 100%;
-    width: 97%;
+    width: 94%;
     right: 0;
     background-image: url("../img/Gradient.jpg");
     background-size: 100% 100%;
     overflow-x: clip;
+    /* overflow-y: hidden; */
     transition: 0.3s ease;
 }
 
@@ -57,12 +64,13 @@ span.info
 
 div#rOverlay
 {
-    display: none;
+    /* display: none; */
+    visibility: hidden;
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.692);
-    opacity: 0.95;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0.1;  
     z-index: 1;
     transition: 0.3s ease;
 }
